@@ -1,0 +1,14 @@
+*
+{
+    font-family: sans-serif;
+    background-color: lightskyblue;
+    align-items: center;
+    text-align: center;
+}
+
+body
+{
+    border: 3px dashed royalblue;
+    margin: 30px;
+    padding: 30px;
+}

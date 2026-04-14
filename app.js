@@ -1,7 +1,7 @@
-function add(event) {
+function dodaj(event) {
     event.preventDefault();
 
-    const input = document.getElementById("task-input");
+    const input = document.getElementById("task_setup");
     const textToAdd = input.value;
 
     if (textToAdd.trim() === "") return;
