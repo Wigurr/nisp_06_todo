@@ -8,26 +8,30 @@ function dodaj(event) {
 
     const li = document.createElement("li");
 
-    // tworzymy checkbox
+    // checkbox
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
 
-    // reakcja na kliknięcie checkboxa
     checkbox.addEventListener("change", function () {
-        if (checkbox.checked) {
-            li.classList.add("done");
-        } else {
-            li.classList.remove("done");
-        }
+        li.classList.toggle("done", checkbox.checked);
     });
 
-    // tekst zadania
+    // tekst
     const span = document.createElement("span");
     span.textContent = textToAdd;
 
-    // składamy element
+    // przycisk USUŃ
+    const button = document.createElement("button");
+    button.textContent = "Usuń";
+
+    button.addEventListener("click", function () {
+        li.remove(); // usuwa konkretny element li
+    });
+
+    // składanie elementu
     li.appendChild(checkbox);
     li.appendChild(span);
+    li.appendChild(button);
 
     document.getElementById("task-list").appendChild(li);
 
